@@ -14,7 +14,9 @@ const reducer = ( state = initialState, action ) => {
         case actionTypes.DELETE_RESULT:
             // const id = 2;
             // const newArray = [...state.results];
-            // newArray.splice(id, 1)
+            // newArray.splice(id, 1) spice ili concat su losi primeri
+            // zato to menjaju originalni array, zbog ovoga treba koristiti
+            // metode concat ili filter.
             const updatedArray = state.results.filter(result => result.id !== action.resultElId);
             return {
                 ...state,
