@@ -15,10 +15,10 @@ class Counter extends Component {
                 <CounterControl label="Add 10" clicked={this.props.onAddCounter}  />
                 <CounterControl label="Subtract 15" clicked={this.props.onSubtractCounter}  />
                 <hr />
-                <button onClick={() => this.props.onStoreResult(this.props.ctr)}>Store Result</button>
+                <button onClick={() => this.props.onStoreResult(this.props.counter)}>Store Result</button>
                 <ul>
                     {this.props.storedResults.map(strResult => (
-                        <li key={storedResults.id} onClick={() => this.props.onDeleteResult(strResult.id)}>{strResult.value}</li>
+                        <li key={strResult.id} onClick={() => this.props.onDeleteResult(strResult.id)}>{strResult.value}</li>
                     ))}
                 </ul>
             </div>
